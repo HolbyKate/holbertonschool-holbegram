@@ -1,9 +1,18 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import '../lib2/screens/login_screen.dart';
+
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp();
+  await Firebase.initializeApp(
+    options: const FirebaseOptions(
+    apiKey: "AIzaSyC4w71kytgJdQ2ZsJLzOt22gLcJ857hj34",
+    projectId: "holbegram-1980b",
+    storageBucket: "holbegram-1980b.firebasestorage.app",
+    appId: "1:423402819319:android:5a345f6627d02e3054cdf2",
+  ),
+  );
   runApp(const MyApp());
 }
 
@@ -14,7 +23,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'com.example.holbegram',
+      debugShowCheckedModeBanner: false,
+      title: 'Holbegram',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
